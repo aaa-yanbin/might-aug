@@ -14,5 +14,8 @@ if option == 'Greet':
     st.write(f'# Hello, {name}, have a great day!')
 
 else:
-    url = st.text_input('Insert the URL of the image')
-    st.image(url)
+    try:
+        url = st.text_input('Insert the URL of the image')
+        st.image(url)
+    except:
+        st.error('Please paste a URL')
