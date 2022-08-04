@@ -11,7 +11,11 @@ option = st.sidebar.selectbox(
 
 if option == 'Greet':
     name = st.text_input('What is your name?')
-    st.write(f'# Hello, {name}, have a great day!')
+    if name == '':
+        st.write('')
+    else:
+        st.write(f'# Hello, {name}, have a great day!')
+        
 
 else:
     try:
