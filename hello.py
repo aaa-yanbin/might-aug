@@ -6,10 +6,12 @@ st.header("My first Streamlit App")
 
 option = st.sidebar.selectbox(
     'Choose an option',
-     ['Show Hello', 'Display a picture'])
+     ['Greet', 'Display a picture'])
 
 
-if option == 'Show Hello':
+if option == 'Greet':
+    name = st.text_input('What is your name?')
+    
     st.write('# Hello everybody')
 
 else:
